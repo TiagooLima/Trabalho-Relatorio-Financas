@@ -14,8 +14,7 @@ from rich import print
 if not os.path.exists("categorias.csv"):
     open("categorias.csv", "w").close()
 
-with open("categorias.csv", encoding='UTF-8') as f:
-    arquivo = f.read().split('\n')
+
 
 while True:
     print("\n[bold orchid1]FINANÇAS PESSOAIS[/bold orchid1]")
@@ -60,8 +59,8 @@ while True:
         time.sleep(4)       
 
     elif opcao == 3:
-        """ with open("categorias.csv", encoding='UTF-8') as f:
-            arquivo = f.read().split('\n') """
+        with open("categorias.csv", encoding='UTF-8') as f:
+            arquivo = f.read().split('\n') 
 
         entradas = 0
         saidas = 0
@@ -90,6 +89,8 @@ while True:
         time.sleep(2.5)
 
     elif opcao == 4:
+        with open("categorias.csv", encoding='UTF-8') as f:
+            arquivo = f.read().split('\n')
         entradas = 0
         for c in range(0, len(arquivo)):
             arquivoPicotado = arquivo[c].split(';')
@@ -107,6 +108,8 @@ while True:
         time.sleep(1.5)
 
     elif opcao == 5:
+        with open("categorias.csv", encoding='UTF-8') as f:
+            arquivo = f.read().split('\n')
         saida = 0
         for c in range(0, len(arquivo)):
             arquivoPicotado = arquivo[c].split(';')
